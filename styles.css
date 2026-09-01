@@ -2076,6 +2076,470 @@ input, select, textarea {
 }
 
 /* ========================================
+   THEME TOGGLE BUTTON
+   ======================================== */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--pink-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    transition: var(--transition-base);
+    position: relative;
+}
+
+.theme-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: var(--transition-base);
+}
+
+.light-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.dark-icon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.dark-mode .light-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.dark-mode .dark-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.mobile-theme-toggle {
+    width: auto;
+    height: auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-xl);
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.mobile-theme-toggle .theme-icon {
+    position: static;
+}
+
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+.dark-mode {
+    --pink-light: #2D1F2F;
+    --pink: #3D2A3F;
+    --pink-dark: #4D3550;
+    --pink-deep: #E8708A;
+    
+    --lavender: #2A2535;
+    --lavender-dark: #3D3550;
+    --mint: #1F3D25;
+    --mint-dark: #7BC97B;
+    --cream: #2D2A25;
+    --cream-dark: #3D3A35;
+    
+    --white: #1A1620;
+    --off-white: #1E1A25;
+    --gray-50: #231F2A;
+    --gray-100: #2A2630;
+    --gray-200: #353040;
+    --gray-300: #454050;
+    --gray-400: #6B6580;
+    --gray-500: #8A8498;
+    --gray-600: #A8A2B0;
+    --gray-700: #C8C2D0;
+    --gray-800: #E0DAE8;
+    --gray-900: #F5F0FA;
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode body,
+body.dark-mode {
+    background-color: #1A1620;
+    color: #C8C2D0;
+}
+
+.dark-mode .navbar.scrolled {
+    background: rgba(26, 22, 32, 0.95);
+}
+
+.dark-mode .logo {
+    color: #F5F0FA;
+}
+
+.dark-mode .nav-link {
+    color: #A8A2B0;
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+    color: #E8708A;
+}
+
+.dark-mode .hamburger span {
+    background: #C8C2D0;
+}
+
+.dark-mode .mobile-menu {
+    background: #1A1620;
+}
+
+.dark-mode .mobile-nav-link {
+    color: #E0DAE8;
+}
+
+.dark-mode .hero {
+    background: linear-gradient(135deg, #2D1F2F 0%, #2A2535 50%, #2D2A25 100%);
+}
+
+.dark-mode .hero-badge {
+    background: rgba(26, 22, 32, 0.8);
+    color: #E8708A;
+}
+
+.dark-mode .hero-title {
+    color: #F5F0FA;
+}
+
+.dark-mode .hero-subtitle {
+    color: #A8A2B0;
+}
+
+.dark-mode .stat-label {
+    color: #8A8498;
+}
+
+.dark-mode .about {
+    background: #1E1A25;
+}
+
+.dark-mode .about-lead,
+.dark-mode .about-text {
+    color: #A8A2B0;
+}
+
+.dark-mode .feature-text h4 {
+    color: #E0DAE8;
+}
+
+.dark-mode .feature-text p {
+    color: #8A8498;
+}
+
+.dark-mode .feature-icon {
+    background: #2D1F2F;
+}
+
+.dark-mode .service-card {
+    background: #231F2A;
+    border-color: #353040;
+}
+
+.dark-mode .service-card:hover {
+    border-color: #3D2A3F;
+}
+
+.dark-mode .service-title {
+    color: #F5F0FA;
+}
+
+.dark-mode .service-desc,
+.dark-mode .service-features li {
+    color: #A8A2B0;
+}
+
+.dark-mode .service-features li i {
+    color: #7BC97B;
+}
+
+.dark-mode .gallery {
+    background: #1E1A25;
+}
+
+.dark-mode .filter-btn {
+    background: #231F2A;
+    border-color: #353040;
+    color: #A8A2B0;
+}
+
+.dark-mode .filter-btn:hover {
+    border-color: #E8708A;
+    color: #E8708A;
+}
+
+.dark-mode .pricing {
+    background: #1A1620;
+}
+
+.dark-mode .pricing-card {
+    background: #231F2A;
+    border-color: #353040;
+}
+
+.dark-mode .pricing-card.featured {
+    border-color: #E8708A;
+}
+
+.dark-mode .pricing-header {
+    background: linear-gradient(135deg, #2D1F2F 0%, #2A2535 100%);
+}
+
+.dark-mode .pricing-category {
+    color: #F5F0FA;
+}
+
+.dark-mode .pricing-icon {
+    background: #1A1620;
+}
+
+.dark-mode .pricing-list li {
+    border-color: #353040;
+}
+
+.dark-mode .service-name {
+    color: #C8C2D0;
+}
+
+.dark-mode .service-dots {
+    border-color: #353040;
+}
+
+.dark-mode .pricing-note {
+    background: #2D1F2F;
+    color: #A8A2B0;
+}
+
+.dark-mode .testimonials {
+    background: linear-gradient(135deg, #2D1F2F 0%, #2A2535 100%);
+}
+
+.dark-mode .testimonial-card {
+    background: #231F2A;
+}
+
+.dark-mode .testimonial-text {
+    color: #A8A2B0;
+}
+
+.dark-mode .author-name {
+    color: #E0DAE8;
+}
+
+.dark-mode .author-title {
+    color: #8A8498;
+}
+
+.dark-mode .contact {
+    background: #1A1620;
+}
+
+.dark-mode .form-group label {
+    color: #C8C2D0;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group select,
+.dark-mode .form-group textarea {
+    background: #231F2A;
+    border-color: #353040;
+    color: #E0DAE8;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group select:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: #E8708A;
+    box-shadow: 0 0 0 3px rgba(232, 112, 138, 0.2);
+}
+
+.dark-mode .form-group input::placeholder,
+.dark-mode .form-group textarea::placeholder {
+    color: #6B6580;
+}
+
+.dark-mode .info-card {
+    background: #231F2A;
+}
+
+.dark-mode .info-card:hover {
+    background: #2D1F2F;
+}
+
+.dark-mode .info-content h4 {
+    color: #E0DAE8;
+}
+
+.dark-mode .info-content p {
+    color: #A8A2B0;
+}
+
+.dark-mode .info-content a:hover {
+    color: #E8708A;
+}
+
+.dark-mode .hours-row {
+    color: #A8A2B0;
+}
+
+.dark-mode .social-link {
+    background: #2D1F2F;
+    color: #E8708A;
+}
+
+.dark-mode .map-section {
+    background: #231F2A;
+}
+
+.dark-mode .map-placeholder {
+    background: linear-gradient(135deg, #2A2535 0%, #2D1F2F 100%);
+    color: #A8A2B0;
+}
+
+.dark-mode .map-placeholder p {
+    color: #8A8498;
+}
+
+.dark-mode .footer {
+    background: #0F0C15;
+}
+
+.dark-mode .footer-grid {
+    border-color: #353040;
+}
+
+.dark-mode .footer-logo {
+    color: #F5F0FA;
+}
+
+.dark-mode .footer-desc {
+    color: #8A8498;
+}
+
+.dark-mode .footer-social a {
+    background: #1A1620;
+    color: #8A8498;
+}
+
+.dark-mode .footer-social a:hover {
+    background: #E8708A;
+    color: #FFFFFF;
+}
+
+.dark-mode .footer-links h4,
+.dark-mode .footer-newsletter h4 {
+    color: #F5F0FA;
+}
+
+.dark-mode .footer-links a {
+    color: #8A8498;
+}
+
+.dark-mode .footer-links a:hover {
+    color: #E8708A;
+}
+
+.dark-mode .footer-newsletter p {
+    color: #8A8498;
+}
+
+.dark-mode .newsletter-form input {
+    background: #1A1620;
+    border-color: #353040;
+    color: #E0DAE8;
+}
+
+.dark-mode .newsletter-form input::placeholder {
+    color: #6B6580;
+}
+
+.dark-mode .newsletter-form input:focus {
+    border-color: #E8708A;
+}
+
+.dark-mode .footer-bottom {
+    color: #6B6580;
+}
+
+.dark-mode .footer-bottom-links a {
+    color: #6B6580;
+}
+
+.dark-mode .footer-bottom-links a:hover {
+    color: #E8708A;
+}
+
+.dark-mode .scroll-progress {
+    background: rgba(232, 112, 138, 0.1);
+}
+
+.dark-mode .img-placeholder {
+    background: linear-gradient(135deg, #2D1F2F 0%, #2A2535 100%);
+    color: #A8A2B0;
+}
+
+.dark-mode .img-placeholder.pink {
+    background: linear-gradient(135deg, #3D2A3F 0%, #4D3550 100%);
+}
+
+.dark-mode .img-placeholder.lavender {
+    background: linear-gradient(135deg, #2A2535 0%, #3D3550 100%);
+}
+
+.dark-mode .img-placeholder.mint {
+    background: linear-gradient(135deg, #1F3D25 0%, #2D5030 100%);
+}
+
+.dark-mode .img-placeholder.cream {
+    background: linear-gradient(135deg, #2D2A25 0%, #3D3A35 100%);
+}
+
+.dark-mode .img-placeholder.pink-light {
+    background: linear-gradient(135deg, #231F2A 0%, #2D1F2F 100%);
+}
+
+.dark-mode .img-placeholder.lavender-light {
+    background: linear-gradient(135deg, #231F2A 0%, #2A2535 100%);
+}
+
+.dark-mode .img-placeholder.mint-light {
+    background: linear-gradient(135deg, #231F2A 0%, #1F3D25 100%);
+}
+
+.dark-mode .lightbox-close {
+    background: #231F2A;
+    color: #C8C2D0;
+}
+
+.dark-mode .lightbox-close:hover {
+    background: #E8708A;
+    color: #FFFFFF;
+}
+
+.dark-mode .back-to-top {
+    background: linear-gradient(135deg, #E8708A 0%, #C7506A 100%);
+}
+
+/* ========================================
    UTILITY CLASSES
    ======================================== */
 .text-center {

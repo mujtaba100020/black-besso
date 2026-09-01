@@ -540,6 +540,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
+    // DARK MODE TOGGLE
+    // ========================================
+    const themeToggle = document.getElementById('themeToggle');
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        html.classList.add('dark-mode');
+        document.body.classList.add('dark-mode');
+    }
+    
+    function toggleTheme() {
+        html.classList.toggle('dark-mode');
+        document.body.classList.toggle('dark-mode');
+        
+        // Save preference
+        const currentTheme = html.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
+        
+        // Re-initialize icons for theme change
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // ========================================
     // KEYBOARD ACCESSIBILITY
     // ========================================
     document.addEventListener('keydown', (e) => {
