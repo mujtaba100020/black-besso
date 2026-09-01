@@ -288,15 +288,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Trigger hero animations after preloader
             setTimeout(() => {
                 initAnimations();
-            }, 300);
-        }, 1500);
+            }, 100);
+        }, 350);
     });
 
-    // Fallback - hide preloader after 3 seconds regardless
+    // Fallback - hide preloader after 1 second regardless
     setTimeout(() => {
         preloader.classList.add('hidden');
         document.body.classList.remove('no-scroll');
-    }, 3000);
+    }, 1000);
 
     // ========================================
     // NAVIGATION
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         counters.forEach(counter => {
             const target = parseInt(counter.dataset.count);
-            const duration = 2000;
+            const duration = 700;
             const start = 0;
             const increment = target / (duration / 16);
             
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
-            }, 1500);
+            }, 600);
         });
         
         // Form input animations
@@ -782,12 +782,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (charIndex < textToType.length) {
                 heroBadgeText.textContent += textToType.charAt(charIndex);
                 charIndex++;
-                setTimeout(typeText, 50);
+                setTimeout(typeText, 20);
             }
         }
         
-        // Start typing after preloader
-        setTimeout(typeText, 2000);
+        // Start typing quickly after preloader
+        setTimeout(typeText, 450);
     }
 
     // ========================================
@@ -803,7 +803,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, 300 + (index * 150));
+        }, 200 + (index * 60));
     });
 
     // ========================================
