@@ -2134,6 +2134,26 @@ input, select, textarea {
     font-weight: 500;
 }
 
+.dark-mode .theme-toggle {
+    background: var(--gray-800);
+    color: var(--gray-300);
+}
+
+.dark-mode .theme-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.dark-mode .mobile-theme-toggle {
+    background: var(--gray-800);
+    color: var(--gray-300);
+}
+
+.dark-mode .mobile-theme-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
 .mobile-theme-toggle .theme-icon {
     position: static;
 }

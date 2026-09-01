@@ -213,6 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Set html lang attribute
         html.setAttribute('lang', lang);
         
+        // Set text direction
+        html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        
         // Update toggle button text (show the OTHER language)
         const toggleLabel = lang === 'ar' ? 'EN' : 'عربي';
         if (langText) langText.textContent = toggleLabel;
@@ -486,20 +489,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // LIGHTBOX
     // ========================================
     const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.querySelector('.lightbox-content');
     const lightboxBtns = document.querySelectorAll('.gallery-btn');
     const lightboxClose = document.querySelector('.lightbox-close');
     
-    lightboxBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            lightbox.classList.add('active');
-            document.body.classList.add('no-scroll');
-        });
-    });
+    function openLightbox(item, fullsrc) {
+        lightbox.classList.add('active');
+        document.body.classList.add('no-scroll');
+        lightboxContent.style.backgroundImage = `url('${fullsrc}')`;
+    }
     
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
-            lightbox.classList.add('active');
+            const fullsrc = item.dataset.fullsrc;
+            openLightbox(item, fullsrc);
             document.body.classList.add('no-scroll');
         });
     });
