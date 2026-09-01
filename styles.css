@@ -2540,6 +2540,124 @@ body.dark-mode {
 }
 
 /* ========================================
+   LANGUAGE TOGGLE & RTL SUPPORT
+   ======================================== */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-xl);
+    background: var(--pink-light);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-base);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.lang-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.mobile-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.mobile-lang-toggle .lang-label {
+    font-weight: 500;
+}
+
+html[lang="ar"] {
+    direction: rtl;
+    font-family: 'Cairo', 'Tajawal', var(--font-body);
+}
+
+html[lang="ar"] body,
+html[lang="ar"] .navbar,
+html[lang="ar"] .section-title,
+html[lang="ar"] .hero-title,
+html[lang="ar"] .logo,
+html[lang="ar"] .service-title,
+html[lang="ar"] .service-card,
+html[lang="ar"] .pricing-card,
+html[lang="ar"] .testimonial-card,
+html[lang="ar"] .footer,
+html[lang="ar"] .mobile-nav-link,
+html[lang="ar"] .btn,
+html[lang="ar"] input,
+html[lang="ar"] select,
+html[lang="ar"] textarea,
+html[lang="ar"] .form-group label,
+html[lang="ar"] .nav-link,
+html[lang="ar"] .mobile-cta,
+html[lang="ar"] .footer-links a,
+html[lang="ar"] .newsletter-form input,
+html[lang="ar"] .footer-bottom {
+    font-family: 'Cairo', 'Tajawal', var(--font-body);
+}
+
+html[lang="ar"] .font-heading,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4 {
+    font-family: 'Cairo', 'Tajawal', var(--font-heading);
+    font-weight: 700;
+}
+
+html[lang="ar"] .section-tag,
+html[lang="ar"] .loader-text {
+    font-family: 'Cairo', 'Tajawal', var(--font-script);
+}
+
+html[lang="ar"] .hero-badge {
+    letter-spacing: 0;
+}
+
+html[lang="ar"] .hero-subtitle {
+    line-height: 1.9;
+}
+
+html[lang="ar"] .about-content {
+    padding-right: 0;
+    padding-left: var(--space-2xl);
+}
+
+html[lang="ar"] .service-features li span {
+    font-weight: 500;
+}
+
+html[lang="ar"] .stats-number::after {
+    content: '+';
+}
+
+html[lang="ar"] .exp-text {
+    letter-spacing: 0;
+}
+
+/* RTL specific layout fixes */
+html[lang="ar"] .nav-cta,
+html[lang="ar"] .lang-toggle {
+    flex-shrink: 0;
+}
+
+html[lang="ar"] .gallery-overlay {
+    text-align: center;
+}
+
+html[lang="ar"] .form-success h3 {
+    font-family: 'Cairo', 'Tajawal', var(--font-heading);
+    font-weight: 700;
+}
+
+/* ========================================
    UTILITY CLASSES
    ======================================== */
 .text-center {

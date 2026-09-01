@@ -3,10 +3,276 @@
    JavaScript Functionality
    ======================================== */
 
+const translations = {
+    ar: {
+        home: 'الرئيسية',
+        about: 'من نحن',
+        services: 'خدماتنا',
+        gallery: 'معرض الأعمال',
+        pricing: 'الأسعار',
+        contact: 'اتصل بنا',
+        bookNow: 'احجزي الآن',
+        bookYourAppointment: 'احجزي موعدك',
+        toggleLanguage: 'تغيير اللغة',
+        toggleTheme: 'تغيير المظهر',
+        premiumNailSalon: 'صالون أظافر فاخر',
+        whereElegance: 'حيث الأناقة',
+        meetsArtistry: 'تلتقي بالفن',
+        heroSubtitle: 'استمتعي بالعناية الفاخرة بالأظافر وتصاميم مذهلة تعكس أسلوبك. تجربة مانيكير مثالية في انتظارك.',
+        exploreServices: 'استكشفي الخدمات',
+        viewOurWork: 'شاهدي أعمالنا',
+        happyClients: 'عميل سعيد',
+        yearsExperience: 'سنوات خبرة',
+        nailDesigns: 'تصميم أظافر',
+        scrollDown: 'مرري للأسفل',
+        salonInterior: 'داخل الصالون',
+        nailArtistry: 'فن الأظافر',
+        yearsOfExcellence: 'سنوات من التميز',
+        aboutUs: 'من نحن',
+        yourBeautyOurPassion: 'جمالك, شغفنا',
+        aboutLead: 'في بلاك بيسو، نؤمن أن كل امرأة تستحق أن تشعر بالتدليل والثقة. فريقنا من فنيي الأظافر المهرة يجمع بين الفن والدقة ليخلق تصاميم مذهلة تعكس أسلوبك الفريد.',
+        aboutText: 'تأسس صالوننا بحب للجمال والاهتمام بالتفاصيل، ليصبح ملاذاً لمن يبحثن عن رعاية فاخرة للأظافر. نستخدم فقط منتجات عالية الجودة ونتبع معايير نظافة صارمة لضمان سلامتكم ورضاكم.',
+        premiumProducts: 'منتجات فاخرة',
+        premiumProductsDesc: 'أفضل الماركات الصديقة للبيئة فقط',
+        certifiedExperts: 'خبراء معتمدون',
+        certifiedExpertsDesc: 'فنيون مرخصون ومحترفون',
+        sterileEnvironment: 'بيئة معقمة',
+        sterileEnvironmentDesc: 'تعقيم بمستوى المستشفيات',
+        ourServices: 'خدماتنا',
+        luxuryNailTreatments: 'علاجات أظافر فاخرة',
+        servicesDesc: 'اكتشفي مجموعتنا من خدمات الأظافر المتميزة المصممة لتجعلك تبدين وتشعرين بالجمال.',
+        classicManicure: 'مانيكير كلاسيكي',
+        classicManicureDesc: 'تشكيل الأظافر، العناية بالبشرة، تدليك اليدين، ووضع الطلاء لأظافر مثالية.',
+        nailShaping: 'تشكيل وتبريد الأظافر',
+        cuticleTreatment: 'علاج البشرة',
+        handMassage: 'تدليك اليدين',
+        polishApplication: 'وضع الطلاء',
+        mostPopular: 'الأكثر طلباً',
+        spaPedicure: 'باديكير سبا',
+        spaPedicureDesc: 'تدليل القدمين كاملاً مع تقشير، قناع، تدليك، وطلاء جميل.',
+        warmWaterSoak: 'نقع في ماء دافئ',
+        exfoliationScrub: 'فرك مقشر',
+        moisturizingMask: 'قناع مرطب',
+        legMassage: 'تدليك الساقين',
+        startingFrom: 'تبدأ من',
+        acrylicNails: 'أظافر أكريليك',
+        acrylicNailsDesc: 'أظافر اصطناعية طويلة الأمد ومتينة مشكّلة بإتقان بأي شكل.',
+        fullSetOverlays: 'مجموعة كاملة وتراكبات',
+        customShapes: 'أشكال مخصصة',
+        pinkWhiteOptions: 'خيارات وردي وأبيض',
+        fillRepair: 'تعبئة وإصلاح',
+        gelNails: 'أظافر جل',
+        gelNailsDesc: 'طلاء جل لامع مقاوم للتشقق يدوم حتى 3 أسابيع مع العناية المناسبة.',
+        gelPolishApplication: 'تطبيق طلاء الجل',
+        builderGelStrength: 'قوة الجل البنائي',
+        noChipGuarantee: 'ضمان ضد التشقق',
+        uvLedCured: 'معالجة بالأشعة فوق البنفسجية',
+        nailArt: 'فن الأظافر',
+        nailArtDesc: 'عبّري عن نفسك بتصاميم مخصصة وفن مرسوم يدوياً وكرستال وأكثر.',
+        handPaintedDesigns: 'تصاميم مرسومة يدوياً',
+        rhinestonesGems: 'أحجار الراين والجواهر',
+        foilGlitter: 'رقائق وبريق',
+        customRequests: 'طلبات مخصصة',
+        beautyTreatments: 'علاجات التجميل',
+        beautyTreatmentsDesc: 'خدمات تجميل كاملة تشمل إزالة الشعر بالشمع والخيط وعلاجات البارافين.',
+        paraffinWaxDip: 'غمس شمع البارافين',
+        eyebrowShaping: 'تشكيل الحواجب',
+        lipChinWax: 'شمع الشفاه والذقن',
+        hotStoneMassage: 'تدليك بالأحجار الساخنة',
+        ourWork: 'أعمالنا',
+        nailArtGallery: 'معرض فن الأظافر',
+        galleryDesc: 'تصفحي مجموعتنا المذهلة من تصاميم الأظافر واستوحي الإلهام.',
+        all: 'الكل',
+        classic: 'كلاسيكي',
+        acrylic: 'أكريليك',
+        gel: 'جل',
+        nailArtShort: 'فن الأظافر',
+        roseQuartzSet: 'مجموعة روز كوارتز',
+        classicGelManicure: 'مانيكير جل كلاسيكي',
+        frenchOmbre: 'فرنسي أومبري',
+        handPaintedGradient: 'تدرج مرسوم يدوياً',
+        stilettoNails: 'أظافر ستايلتو',
+        stilettoGlam: 'جلام ستايلتو',
+        acrylicExtensions: 'امتدادات أكريليك',
+        floralDesign: 'تصميم زهري',
+        springBlossom: 'زهرة الربيع',
+        gelWithNailArt: 'جل مع فن الأظافر',
+        nudeCollection: 'مجموعة نيود',
+        nudeElegance: 'أناقة نيود',
+        classicManicureShort: 'مانيكير كلاسيكي',
+        crystalAccents: 'لمسات كريستال',
+        crystalLuxe: 'فخامة كريستال',
+        artWithRhinestones: 'فن مع أحجار الراين',
+        ombreFrench: 'فرنسي أومبري',
+        acrylicFullSetShort: 'مجموعة أكريليك كاملة',
+        chromeNails: 'أظافر كروم',
+        mirrorChrome: 'كروم مرآة',
+        chromeGelFinish: 'لمسة جل كروم النهائية',
+        ourPriceList: 'قائمة الأسعار',
+        pricingDesc: 'أسعار شفافة لجميع خدماتنا المتميزة. لا رسوم خفية.',
+        manicureServices: 'خدمات المانيكير',
+        gelManicure: 'مانيكير جل',
+        spaManicure: 'مانيكير سبا',
+        paraffinTreatment: 'علاج البارافين',
+        polishChangeOnly: 'تغيير الطلاء فقط',
+        bestValue: 'أفضل قيمة',
+        pedicureServices: 'خدمات الباديكير',
+        classicPedicure: 'باديكير كلاسيكي',
+        gelPedicure: 'باديكير جل',
+        deluxePedicure: 'باديكير ديلوكس',
+        callusTreatment: 'علاج الجلد المتصلب',
+        enhancements: 'التحسينات',
+        acrylicFullSet: 'مجموعة أكريليك كاملة',
+        acrylicFill: 'تعبئة أكريليك',
+        dipPowder: 'بودرة ديب',
+        gelExtensions: 'امتدادات جل',
+        nailArtPerNail: 'فن الأظافر (للظفر)',
+        pricingNote: 'قد تختلف الأسعار حسب طول الظفر وتعقيد التصميم والطلبات الإضافية. يرجى استشارة فنيينا للحصول على أسعار دقيقة.',
+        testimonials: 'آراء العملاء',
+        whatOurClientsSay: 'ماذا يقول عملاؤنا',
+        regularClient: 'عميلة دائمة',
+        nailArtEnthusiast: 'عاشقة لفن الأظافر',
+        spaPedicureLover: 'محبة للباديكير',
+        testimonial1: '"بلاك بيسو غيرت لعبة أظافري تماماً! الاهتمام بالتفاصيل مذهل والأجواء مريحة جداً. لن أذهب لأي مكان آخر!"',
+        testimonial2: '"فنيات الأظافر هنا محترفات حقيقيات. أحضرن أفكاري من بينترست للحياة بشكل مثالي! مانيكير الجل استمر أكثر من 3 أسابيع."',
+        testimonial3: '"أفضل تجربة باديكير على الإطلاق! علاج السبا كان مثالياً وقدمي لم تكونا بهذه النعومة أبداً. الموظفات ودودات ومحترفات."',
+        getInTouch: 'تواصلي معنا',
+        contactDesc: 'جاهزة لأظافر مثالية؟ تواصلي معنا أو احجزي عبر الإنترنت.',
+        yourName: 'اسمك',
+        phoneNumber: 'رقم الهاتف',
+        emailAddress: 'البريد الإلكتروني',
+        preferredDate: 'التاريخ المفضل',
+        selectService: 'اختيار الخدمة',
+        chooseService: 'اختاري خدمة',
+        preferredTime: 'الوقت المفضل',
+        chooseTimeSlot: 'اختاري موعداً',
+        specialRequests: 'طلبات خاصة',
+        bookAppointment: 'احجزي موعداً',
+        bookingRequestSent: 'تم إرسال طلب الحجز!',
+        bookingConfirmMsg: 'سنؤكد موعدك خلال 24 ساعة. شكراً لاختيارك بلاك بيسو!',
+        visitUs: 'زورينا',
+        address: '123 بيوتي لين، جناح 100<br>بيفرلي هيلز، كاليفورنيا 90210',
+        callUs: 'اتصلي بنا',
+        emailUs: 'راسلينا',
+        businessHours: 'ساعات العمل',
+        mondayFriday: 'الاثنين - الجمعة',
+        saturday: 'السبت',
+        sunday: 'الأحد',
+        interactiveMap: 'خريطة تفاعلية',
+        footerDesc: 'حيث تلتقي الأناقة بالفن. رعاية أظافر فاخرة وعلاجات تجميل للمرأة العصرية.',
+        quickLinks: 'روابط سريعة',
+        servicesFooter: 'الخدمات',
+        manicure: 'مانيكير',
+        pedicure: 'باديكير',
+        acrylicNailsFooter: 'أظافر أكريليك',
+        gelNailsFooter: 'أظافر جل',
+        nailArtFooter: 'فن الأظافر',
+        beautyTreatmentsFooter: 'علاجات التجميل',
+        stayUpdated: 'ابق على اطلاع',
+        newsletterDesc: 'اشتركي للحصول على عروض حصرية واتجاهات الأظافر ونصائح الجمال.',
+        copyright: '© 2025 صالون بلاك بيسو للأظافر. جميع الحقوق محفوظة.',
+        privacyPolicy: 'سياسة الخصوصية',
+        termsOfService: 'شروط الخدمة',
+        nailArtPreview: 'معاينة فن الأظافر',
+        optClassicManicure: 'مانيكير كلاسيكي - $25',
+        optGelManicure: 'مانيكير جل - $40',
+        optSpaManicure: 'مانيكير سبا - $35',
+        optClassicPedicure: 'باديكير كلاسيكي - $35',
+        optSpaPedicure: 'باديكير سبا - $50',
+        optGelPedicure: 'باديكير جل - $55',
+        optAcrylicFull: 'مجموعة أكريليك كاملة - $55',
+        optAcrylicFill: 'تعبئة أكريليك - $35',
+        optDipPowder: 'بودرة ديب - $45',
+        optGelExtensions: 'امتدادات جل - $60',
+        optNailArt: 'استشارة فن الأظافر',
+        optOther: 'خدمات أخرى'
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
+    }
+
+    // ========================================
+    // LANGUAGE SWITCHER (EN / AR)
+    // ========================================
+    const html = document.documentElement;
+    const langToggle = document.getElementById('langToggle');
+    const mobileLangToggle = document.getElementById('mobileLangToggle');
+    const langText = document.getElementById('langText');
+    const mobileLangText = document.getElementById('mobileLangText');
+    
+    // Get saved language preference or default to English
+    let currentLang = localStorage.getItem('lang') || 'en';
+    
+    function applyLanguage(lang) {
+        currentLang = lang;
+        
+        // Set html lang attribute
+        html.setAttribute('lang', lang);
+        
+        // Update toggle button text (show the OTHER language)
+        const toggleLabel = lang === 'ar' ? 'EN' : 'عربي';
+        if (langText) langText.textContent = toggleLabel;
+        if (mobileLangText) mobileLangText.textContent = toggleLabel;
+        
+        // Translate all elements with data-translate attribute
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.dataset.translate;
+            if (lang === 'ar' && translations.ar[key]) {
+                el.innerHTML = translations.ar[key];
+            } else {
+                el.innerHTML = el.getAttribute('data-translate-original') || el.dataset.translate;
+            }
+        });
+        
+        // Handle placeholders
+        document.querySelectorAll('[data-placeholder-en], [data-placeholder-ar]').forEach(el => {
+            if (lang === 'ar') {
+                el.setAttribute('placeholder', el.getAttribute('data-placeholder-ar'));
+            } else {
+                el.setAttribute('placeholder', el.getAttribute('data-placeholder-en'));
+            }
+        });
+        
+        // Store original HTML on first run
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            if (!el.getAttribute('data-translate-original')) {
+                el.setAttribute('data-translate-original', el.innerHTML);
+            }
+        });
+        
+        // Save preference
+        localStorage.setItem('lang', lang);
+        
+        // Re-render icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    }
+    
+    // Store original HTML before first language application
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        if (!el.getAttribute('data-translate-original')) {
+            el.setAttribute('data-translate-original', el.innerHTML);
+        }
+    });
+    
+    // Apply saved language
+    applyLanguage(currentLang);
+    
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        });
+    }
+    
+    if (mobileLangToggle) {
+        mobileLangToggle.addEventListener('click', () => {
+            applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        });
     }
 
     // ========================================
@@ -503,17 +769,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
     // TYPING EFFECT FOR HERO BADGE
     // ========================================
-    const heroBadge = document.querySelector('.hero-badge');
+    const heroBadgeText = document.querySelector('[data-translate="premiumNailSalon"]');
     
-    if (heroBadge) {
-        const text = heroBadge.textContent;
-        heroBadge.textContent = '';
+    if (heroBadgeText) {
+        // Store the current text (already translated) and type it character by character
+        const textToType = heroBadgeText.textContent;
+        heroBadgeText.textContent = '';
         
         let charIndex = 0;
         
         function typeText() {
-            if (charIndex < text.length) {
-                heroBadge.textContent += text.charAt(charIndex);
+            if (charIndex < textToType.length) {
+                heroBadgeText.textContent += textToType.charAt(charIndex);
                 charIndex++;
                 setTimeout(typeText, 50);
             }
@@ -544,7 +811,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
     const themeToggle = document.getElementById('themeToggle');
     const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-    const html = document.documentElement;
     
     // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem('theme') || 'light';

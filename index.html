@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -44,15 +44,19 @@
             </a>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active" data-translate="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-translate="about">About</a></li>
+                <li><a href="#services" class="nav-link" data-translate="services">Services</a></li>
+                <li><a href="#gallery" class="nav-link" data-translate="gallery">Gallery</a></li>
+                <li><a href="#pricing" class="nav-link" data-translate="pricing">Pricing</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="contact">Contact</a></li>
             </ul>
             
-            <a href="#contact" class="nav-cta">Book Now</a>
+            <a href="#contact" class="nav-cta" data-translate="bookNow">Book Now</a>
+            
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-text" id="langText">عربي</span>
+            </button>
             
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
                 <i data-lucide="sun" class="theme-icon light-icon"></i>
@@ -70,19 +74,23 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
             <ul class="mobile-nav-links">
-            <li><a href="#home" class="mobile-nav-link">Home</a></li>
-            <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#services" class="mobile-nav-link">Services</a></li>
-            <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-            <li><a href="#pricing" class="mobile-nav-link">Pricing</a></li>
-            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="#home" class="mobile-nav-link" data-translate="home">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link" data-translate="about">About</a></li>
+            <li><a href="#services" class="mobile-nav-link" data-translate="services">Services</a></li>
+            <li><a href="#gallery" class="mobile-nav-link" data-translate="gallery">Gallery</a></li>
+            <li><a href="#pricing" class="mobile-nav-link" data-translate="pricing">Pricing</a></li>
+            <li><a href="#contact" class="mobile-nav-link" data-translate="contact">Contact</a></li>
         </ul>
+        <button class="lang-toggle mobile-lang-toggle" id="mobileLangToggle" aria-label="Switch language">
+            <span class="lang-text" id="mobileLangText">عربي</span>
+            <span class="lang-label" data-translate="toggleLanguage">Switch Language</span>
+        </button>
         <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle dark mode">
             <i data-lucide="sun" class="theme-icon light-icon"></i>
             <i data-lucide="moon" class="theme-icon dark-icon"></i>
-            <span>Toggle Theme</span>
+            <span data-translate="toggleTheme">Toggle Theme</span>
         </button>
-        <a href="#contact" class="mobile-cta">Book Your Appointment</a>
+        <a href="#contact" class="mobile-cta" data-translate="bookYourAppointment">Book Your Appointment</a>
     </div>
 
     <!-- Hero Section -->
@@ -100,50 +108,50 @@
         <div class="hero-content">
             <div class="hero-badge" data-animate="fade-down">
                 <span class="badge-diamond">◆</span>
-                Premium Nail Salon
+                <span data-translate="premiumNailSalon">Premium Nail Salon</span>
                 <span class="badge-diamond">◆</span>
             </div>
             
             <h1 class="hero-title" data-animate="fade-up">
-                <span class="title-line">Where Elegance</span>
-                <span class="title-line title-accent">Meets Artistry</span>
+                <span class="title-line" data-translate="whereElegance">Where Elegance</span>
+                <span class="title-line title-accent" data-translate="meetsArtistry">Meets Artistry</span>
             </h1>
             
-            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="200" data-translate="heroSubtitle">
                 Indulge in luxurious nail care and stunning designs that speak your style. 
                 Your perfect manicure experience awaits.
             </p>
             
             <div class="hero-buttons" data-animate="fade-up" data-delay="400">
                 <a href="#services" class="btn btn-primary">
-                    <span>Explore Services</span>
+                    <span data-translate="exploreServices">Explore Services</span>
                     <i data-lucide="arrow-right"></i>
                 </a>
                 <a href="#gallery" class="btn btn-secondary">
-                    <span>View Our Work</span>
+                    <span data-translate="viewOurWork">View Our Work</span>
                 </a>
             </div>
             
             <div class="hero-stats" data-animate="fade-up" data-delay="600">
                 <div class="stat-item">
                     <span class="stat-number" data-count="5000">0</span>
-                    <span class="stat-label">Happy Clients</span>
+                    <span class="stat-label" data-translate="happyClients">Happy Clients</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number" data-count="15">0</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-label" data-translate="yearsExperience">Years Experience</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-number" data-count="200">0</span>
-                    <span class="stat-label">Nail Designs</span>
+                    <span class="stat-label" data-translate="nailDesigns">Nail Designs</span>
                 </div>
             </div>
         </div>
         
         <div class="hero-scroll">
-            <span>Scroll Down</span>
+            <span data-translate="scrollDown">Scroll Down</span>
             <div class="scroll-indicator">
                 <div class="scroll-dot"></div>
             </div>
@@ -158,30 +166,30 @@
                     <div class="about-img-main">
                         <div class="img-placeholder">
                             <i data-lucide="sparkles"></i>
-                            <span>Salon Interior</span>
+                            <span data-translate="salonInterior">Salon Interior</span>
                         </div>
                     </div>
                     <div class="about-img-secondary">
                         <div class="img-placeholder">
                             <i data-lucide="heart"></i>
-                            <span>Nail Artistry</span>
+                            <span data-translate="nailArtistry">Nail Artistry</span>
                         </div>
                     </div>
                     <div class="experience-badge">
                         <span class="exp-number">15+</span>
-                        <span class="exp-text">Years of Excellence</span>
+                        <span class="exp-text" data-translate="yearsOfExcellence">Years of Excellence</span>
                     </div>
                 </div>
                 
                 <div class="about-content" data-animate="slide-left">
-                    <span class="section-tag">About Us</span>
-                    <h2 class="section-title">Your Beauty, Our Passion</h2>
-                    <p class="about-lead">
+                    <span class="section-tag" data-translate="aboutUs">About Us</span>
+                    <h2 class="section-title" data-translate="yourBeautyOurPassion">Your Beauty, Our Passion</h2>
+                    <p class="about-lead" data-translate="aboutLead">
                         At Black Besso, we believe every woman deserves to feel pampered and confident. 
                         Our team of skilled nail technicians combines artistry with precision to create 
                         stunning nail designs that reflect your unique style.
                     </p>
-                    <p class="about-text">
+                    <p class="about-text" data-translate="aboutText">
                         Founded with a love for beauty and attention to detail, our salon has become 
                         a sanctuary for those seeking premium nail care. We use only the highest quality 
                         products and follow strict hygiene standards to ensure your safety and satisfaction.
@@ -193,8 +201,8 @@
                                 <i data-lucide="shield-check"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Premium Products</h4>
-                                <p>Only the finest, eco-friendly brands</p>
+                                <h4 data-translate="premiumProducts">Premium Products</h4>
+                                <p data-translate="premiumProductsDesc">Only the finest, eco-friendly brands</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -202,8 +210,8 @@
                                 <i data-lucide="award"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Certified Experts</h4>
-                                <p>Licensed & trained professionals</p>
+                                <h4 data-translate="certifiedExperts">Certified Experts</h4>
+                                <p data-translate="certifiedExpertsDesc">Licensed & trained professionals</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -211,8 +219,8 @@
                                 <i data-lucide="sparkle"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Sterile Environment</h4>
-                                <p>Hospital-grade sanitization</p>
+                                <h4 data-translate="sterileEnvironment">Sterile Environment</h4>
+                                <p data-translate="sterileEnvironmentDesc">Hospital-grade sanitization</p>
                             </div>
                         </div>
                     </div>
@@ -225,9 +233,9 @@
     <section id="services" class="services section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Our Services</span>
-                <h2 class="section-title">Luxury Nail Treatments</h2>
-                <p class="section-desc">Discover our range of premium nail services designed to make you look and feel beautiful.</p>
+                <span class="section-tag" data-translate="ourServices">Our Services</span>
+                <h2 class="section-title" data-translate="luxuryNailTreatments">Luxury Nail Treatments</h2>
+                <p class="section-desc" data-translate="servicesDesc">Discover our range of premium nail services designed to make you look and feel beautiful.</p>
             </div>
             
             <div class="services-grid">
@@ -236,36 +244,36 @@
                     <div class="service-icon">
                         <i data-lucide="hand-metal"></i>
                     </div>
-                    <h3 class="service-title">Classic Manicure</h3>
-                    <p class="service-desc">Nail shaping, cuticle care, hand massage, and polish application for flawless nails.</p>
+                    <h3 class="service-title" data-translate="classicManicure">Classic Manicure</h3>
+                    <p class="service-desc" data-translate="classicManicureDesc">Nail shaping, cuticle care, hand massage, and polish application for flawless nails.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Nail Shaping & Filing</li>
-                        <li><i data-lucide="check"></i> Cuticle Treatment</li>
-                        <li><i data-lucide="check"></i> Hand Massage</li>
-                        <li><i data-lucide="check"></i> Polish Application</li>
+                        <li><i data-lucide="check"></i> <span data-translate="nailShaping">Nail Shaping & Filing</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="cuticleTreatment">Cuticle Treatment</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="handMassage">Hand Massage</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="polishApplication">Polish Application</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$25</span>
                     </div>
                 </div>
                 
                 <!-- Pedicure -->
                 <div class="service-card featured" data-animate="fade-up" data-delay="100">
-                    <div class="service-badge">Most Popular</div>
+                    <div class="service-badge" data-translate="mostPopular">Most Popular</div>
                     <div class="service-icon">
                         <i data-lucide="footprints"></i>
                     </div>
-                    <h3 class="service-title">Spa Pedicure</h3>
-                    <p class="service-desc">Ultimate foot pampering with exfoliation, mask, massage, and beautiful polish.</p>
+                    <h3 class="service-title" data-translate="spaPedicure">Spa Pedicure</h3>
+                    <p class="service-desc" data-translate="spaPedicureDesc">Ultimate foot pampering with exfoliation, mask, massage, and beautiful polish.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Warm Water Soak</li>
-                        <li><i data-lucide="check"></i> Exfoliation Scrub</li>
-                        <li><i data-lucide="check"></i> Moisturizing Mask</li>
-                        <li><i data-lucide="check"></i> Leg Massage</li>
+                        <li><i data-lucide="check"></i> <span data-translate="warmWaterSoak">Warm Water Soak</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="exfoliationScrub">Exfoliation Scrub</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="moisturizingMask">Moisturizing Mask</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="legMassage">Leg Massage</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$40</span>
                     </div>
                 </div>
@@ -275,16 +283,16 @@
                     <div class="service-icon">
                         <i data-lucide="gem"></i>
                     </div>
-                    <h3 class="service-title">Acrylic Nails</h3>
-                    <p class="service-desc">Long-lasting, durable nail extensions sculpted to perfection in any shape.</p>
+                    <h3 class="service-title" data-translate="acrylicNails">Acrylic Nails</h3>
+                    <p class="service-desc" data-translate="acrylicNailsDesc">Long-lasting, durable nail extensions sculpted to perfection in any shape.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Full Set & Overlays</li>
-                        <li><i data-lucide="check"></i> Custom Shapes</li>
-                        <li><i data-lucide="check"></i> Pink & White Options</li>
-                        <li><i data-lucide="check"></i> Fill & Repair</li>
+                        <li><i data-lucide="check"></i> <span data-translate="fullSetOverlays">Full Set & Overlays</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="customShapes">Custom Shapes</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="pinkWhiteOptions">Pink & White Options</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="fillRepair">Fill & Repair</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$45</span>
                     </div>
                 </div>
@@ -294,16 +302,16 @@
                     <div class="service-icon">
                         <i data-lucide="zap"></i>
                     </div>
-                    <h3 class="service-title">Gel Nails</h3>
-                    <p class="service-desc">High-shine, chip-resistant gel polish that lasts up to 3 weeks with proper care.</p>
+                    <h3 class="service-title" data-translate="gelNails">Gel Nails</h3>
+                    <p class="service-desc" data-translate="gelNailsDesc">High-shine, chip-resistant gel polish that lasts up to 3 weeks with proper care.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Gel Polish Application</li>
-                        <li><i data-lucide="check"></i> Builder Gel Strength</li>
-                        <li><i data-lucide="check"></i> No Chip Guarantee</li>
-                        <li><i data-lucide="check"></i> UV/LED Cured</li>
+                        <li><i data-lucide="check"></i> <span data-translate="gelPolishApplication">Gel Polish Application</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="builderGelStrength">Builder Gel Strength</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="noChipGuarantee">No Chip Guarantee</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="uvLedCured">UV/LED Cured</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$35</span>
                     </div>
                 </div>
@@ -313,16 +321,16 @@
                     <div class="service-icon">
                         <i data-lucide="palette"></i>
                     </div>
-                    <h3 class="service-title">Nail Art</h3>
-                    <p class="service-desc">Express yourself with custom designs, hand-painted art, crystals, and more.</p>
+                    <h3 class="service-title" data-translate="nailArt">Nail Art</h3>
+                    <p class="service-desc" data-translate="nailArtDesc">Express yourself with custom designs, hand-painted art, crystals, and more.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Hand-Painted Designs</li>
-                        <li><i data-lucide="check"></i> Rhinestones & Gems</li>
-                        <li><i data-lucide="check"></i> Foil & Glitter</li>
-                        <li><i data-lucide="check"></i> Custom Requests</li>
+                        <li><i data-lucide="check"></i> <span data-translate="handPaintedDesigns">Hand-Painted Designs</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="rhinestonesGems">Rhinestones & Gems</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="foilGlitter">Foil & Glitter</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="customRequests">Custom Requests</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$15</span>
                     </div>
                 </div>
@@ -332,16 +340,16 @@
                     <div class="service-icon">
                         <i data-lucide="flower-2"></i>
                     </div>
-                    <h3 class="service-title">Beauty Treatments</h3>
-                    <p class="service-desc">Complete beauty services including waxing, threading, and paraffin treatments.</p>
+                    <h3 class="service-title" data-translate="beautyTreatments">Beauty Treatments</h3>
+                    <p class="service-desc" data-translate="beautyTreatmentsDesc">Complete beauty services including waxing, threading, and paraffin treatments.</p>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Paraffin Wax Dip</li>
-                        <li><i data-lucide="check"></i> Eyebrow Shaping</li>
-                        <li><i data-lucide="check"></i> Lip & Chin Wax</li>
-                        <li><i data-lucide="check"></i> Hot Stone Massage</li>
+                        <li><i data-lucide="check"></i> <span data-translate="paraffinWaxDip">Paraffin Wax Dip</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="eyebrowShaping">Eyebrow Shaping</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="lipChinWax">Lip & Chin Wax</span></li>
+                        <li><i data-lucide="check"></i> <span data-translate="hotStoneMassage">Hot Stone Massage</span></li>
                     </ul>
                     <div class="service-price">
-                        <span class="price-label">Starting from</span>
+                        <span class="price-label" data-translate="startingFrom">Starting from</span>
                         <span class="price-amount">$20</span>
                     </div>
                 </div>
@@ -353,17 +361,17 @@
     <section id="gallery" class="gallery section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Our Work</span>
-                <h2 class="section-title">Nail Art Gallery</h2>
-                <p class="section-desc">Browse through our stunning collection of nail designs and get inspired.</p>
+                <span class="section-tag" data-translate="ourWork">Our Work</span>
+                <h2 class="section-title" data-translate="nailArtGallery">Nail Art Gallery</h2>
+                <p class="section-desc" data-translate="galleryDesc">Browse through our stunning collection of nail designs and get inspired.</p>
             </div>
             
             <div class="gallery-filter" data-animate="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="classic">Classic</button>
-                <button class="filter-btn" data-filter="art">Nail Art</button>
-                <button class="filter-btn" data-filter="acrylic">Acrylic</button>
-                <button class="filter-btn" data-filter="gel">Gel</button>
+                <button class="filter-btn active" data-filter="all" data-translate="all">All</button>
+                <button class="filter-btn" data-filter="classic" data-translate="classic">Classic</button>
+                <button class="filter-btn" data-filter="art" data-translate="nailArtShort">Nail Art</button>
+                <button class="filter-btn" data-filter="acrylic" data-translate="acrylic">Acrylic</button>
+                <button class="filter-btn" data-filter="gel" data-translate="gel">Gel</button>
             </div>
             
             <div class="gallery-grid">
@@ -371,12 +379,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder pink">
                             <i data-lucide="heart"></i>
-                            <span>Rose Quartz Set</span>
+                            <span data-translate="roseQuartzSet">Rose Quartz Set</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Rose Quartz Set</h4>
-                        <p>Classic Gel Manicure</p>
+                        <h4 data-translate="roseQuartzSet">Rose Quartz Set</h4>
+                        <p data-translate="classicGelManicure">Classic Gel Manicure</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -385,12 +393,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder lavender">
                             <i data-lucide="sparkles"></i>
-                            <span>French Ombre</span>
+                            <span data-translate="frenchOmbre">French Ombre</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>French Ombre</h4>
-                        <p>Hand-Painted Gradient</p>
+                        <h4 data-translate="frenchOmbre">French Ombre</h4>
+                        <p data-translate="handPaintedGradient">Hand-Painted Gradient</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -399,12 +407,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder mint">
                             <i data-lucide="gem"></i>
-                            <span>Stiletto Nails</span>
+                            <span data-translate="stilettoNails">Stiletto Nails</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Stiletto Glam</h4>
-                        <p>Acrylic Extensions</p>
+                        <h4 data-translate="stilettoGlam">Stiletto Glam</h4>
+                        <p data-translate="acrylicExtensions">Acrylic Extensions</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -413,12 +421,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder cream">
                             <i data-lucide="flower-2"></i>
-                            <span>Floral Design</span>
+                            <span data-translate="floralDesign">Floral Design</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Spring Blossom</h4>
-                        <p>Gel with Nail Art</p>
+                        <h4 data-translate="springBlossom">Spring Blossom</h4>
+                        <p data-translate="gelWithNailArt">Gel with Nail Art</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -427,12 +435,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder pink-light">
                             <i data-lucide="crown"></i>
-                            <span>Nude Collection</span>
+                            <span data-translate="nudeCollection">Nude Collection</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Nude Elegance</h4>
-                        <p>Classic Manicure</p>
+                        <h4 data-translate="nudeElegance">Nude Elegance</h4>
+                        <p data-translate="classicManicureShort">Classic Manicure</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -441,12 +449,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder lavender-light">
                             <i data-lucide="star"></i>
-                            <span>Crystal Accents</span>
+                            <span data-translate="crystalAccents">Crystal Accents</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Crystal Luxe</h4>
-                        <p>Art with Rhinestones</p>
+                        <h4 data-translate="crystalLuxe">Crystal Luxe</h4>
+                        <p data-translate="artWithRhinestones">Art with Rhinestones</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -455,12 +463,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder mint-light">
                             <i data-lucide="palette"></i>
-                            <span>Ombre French</span>
+                            <span data-translate="ombreFrench">Ombre French</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Ombre French</h4>
-                        <p>Acrylic Full Set</p>
+                        <h4 data-translate="ombreFrench">Ombre French</h4>
+                        <p data-translate="acrylicFullSetShort">Acrylic Full Set</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -469,12 +477,12 @@
                     <div class="gallery-img">
                         <div class="img-placeholder">
                             <i data-lucide="zap"></i>
-                            <span>Chrome Nails</span>
+                            <span data-translate="chromeNails">Chrome Nails</span>
                         </div>
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Mirror Chrome</h4>
-                        <p>Chrome Gel Finish</p>
+                        <h4 data-translate="mirrorChrome">Mirror Chrome</h4>
+                        <p data-translate="chromeGelFinish">Chrome Gel Finish</p>
                         <button class="gallery-btn" data-lucide="maximize-2"></button>
                     </div>
                 </div>
@@ -486,42 +494,42 @@
     <section id="pricing" class="pricing section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Pricing</span>
-                <h2 class="section-title">Our Price List</h2>
-                <p class="section-desc">Transparent pricing for all our premium services. No hidden fees.</p>
+                <span class="section-tag" data-translate="pricing">Pricing</span>
+                <h2 class="section-title" data-translate="ourPriceList">Our Price List</h2>
+                <p class="section-desc" data-translate="pricingDesc">Transparent pricing for all our premium services. No hidden fees.</p>
             </div>
             
             <div class="pricing-grid">
                 <div class="pricing-card" data-animate="fade-up">
                     <div class="pricing-header">
-                        <h3 class="pricing-category">Manicure Services</h3>
+                        <h3 class="pricing-category" data-translate="manicureServices">Manicure Services</h3>
                         <div class="pricing-icon">
                             <i data-lucide="hand-metal"></i>
                         </div>
                     </div>
                     <ul class="pricing-list">
                         <li>
-                            <span class="service-name">Classic Manicure</span>
+                            <span class="service-name" data-translate="classicManicure">Classic Manicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$25</span>
                         </li>
                         <li>
-                            <span class="service-name">Gel Manicure</span>
+                            <span class="service-name" data-translate="gelManicure">Gel Manicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$40</span>
                         </li>
                         <li>
-                            <span class="service-name">Spa Manicure</span>
+                            <span class="service-name" data-translate="spaManicure">Spa Manicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$35</span>
                         </li>
                         <li>
-                            <span class="service-name">Paraffin Treatment</span>
+                            <span class="service-name" data-translate="paraffinTreatment">Paraffin Treatment</span>
                             <span class="service-dots"></span>
                             <span class="service-price">+$10</span>
                         </li>
                         <li>
-                            <span class="service-name">Polish Change Only</span>
+                            <span class="service-name" data-translate="polishChangeOnly">Polish Change Only</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$12</span>
                         </li>
@@ -529,36 +537,36 @@
                 </div>
                 
                 <div class="pricing-card featured" data-animate="fade-up" data-delay="100">
-                    <div class="pricing-badge">Best Value</div>
+                    <div class="pricing-badge" data-translate="bestValue">Best Value</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-category">Pedicure Services</h3>
+                        <h3 class="pricing-category" data-translate="pedicureServices">Pedicure Services</h3>
                         <div class="pricing-icon">
                             <i data-lucide="footprints"></i>
                         </div>
                     </div>
                     <ul class="pricing-list">
                         <li>
-                            <span class="service-name">Classic Pedicure</span>
+                            <span class="service-name" data-translate="classicPedicure">Classic Pedicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$35</span>
                         </li>
                         <li>
-                            <span class="service-name">Spa Pedicure</span>
+                            <span class="service-name" data-translate="spaPedicure">Spa Pedicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$50</span>
                         </li>
                         <li>
-                            <span class="service-name">Gel Pedicure</span>
+                            <span class="service-name" data-translate="gelPedicure">Gel Pedicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$55</span>
                         </li>
                         <li>
-                            <span class="service-name">Deluxe Pedicure</span>
+                            <span class="service-name" data-translate="deluxePedicure">Deluxe Pedicure</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$65</span>
                         </li>
                         <li>
-                            <span class="service-name">Callus Treatment</span>
+                            <span class="service-name" data-translate="callusTreatment">Callus Treatment</span>
                             <span class="service-dots"></span>
                             <span class="service-price">+$15</span>
                         </li>
@@ -567,34 +575,34 @@
                 
                 <div class="pricing-card" data-animate="fade-up" data-delay="200">
                     <div class="pricing-header">
-                        <h3 class="pricing-category">Enhancements</h3>
+                        <h3 class="pricing-category" data-translate="enhancements">Enhancements</h3>
                         <div class="pricing-icon">
                             <i data-lucide="sparkles"></i>
                         </div>
                     </div>
                     <ul class="pricing-list">
                         <li>
-                            <span class="service-name">Acrylic Full Set</span>
+                            <span class="service-name" data-translate="acrylicFullSet">Acrylic Full Set</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$55</span>
                         </li>
                         <li>
-                            <span class="service-name">Acrylic Fill</span>
+                            <span class="service-name" data-translate="acrylicFill">Acrylic Fill</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$35</span>
                         </li>
                         <li>
-                            <span class="service-name">Dip Powder</span>
+                            <span class="service-name" data-translate="dipPowder">Dip Powder</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$45</span>
                         </li>
                         <li>
-                            <span class="service-name">Gel Extensions</span>
+                            <span class="service-name" data-translate="gelExtensions">Gel Extensions</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$60</span>
                         </li>
                         <li>
-                            <span class="service-name">Nail Art (per nail)</span>
+                            <span class="service-name" data-translate="nailArtPerNail">Nail Art (per nail)</span>
                             <span class="service-dots"></span>
                             <span class="service-price">$5+</span>
                         </li>
@@ -604,7 +612,7 @@
             
             <div class="pricing-note" data-animate="fade-up">
                 <i data-lucide="info"></i>
-                <p>Prices may vary based on nail length, design complexity, and additional requests. Please consult with our technicians for accurate pricing.</p>
+                <p data-translate="pricingNote">Prices may vary based on nail length, design complexity, and additional requests. Please consult with our technicians for accurate pricing.</p>
             </div>
         </div>
     </section>
@@ -613,8 +621,8 @@
     <section class="testimonials section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Testimonials</span>
-                <h2 class="section-title">What Our Clients Say</h2>
+                <span class="section-tag" data-translate="testimonials">Testimonials</span>
+                <h2 class="section-title" data-translate="whatOurClientsSay">What Our Clients Say</h2>
             </div>
             
             <div class="testimonials-slider">
@@ -626,12 +634,12 @@
                         <i data-lucide="star"></i>
                         <i data-lucide="star"></i>
                     </div>
-                    <p class="testimonial-text">"Black Besso completely changed my nail game! The attention to detail is incredible and the atmosphere is so relaxing. I'll never go anywhere else!"</p>
+                    <p class="testimonial-text" data-translate="testimonial1">"Black Besso completely changed my nail game! The attention to detail is incredible and the atmosphere is so relaxing. I'll never go anywhere else!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
                             <span class="author-name">Sarah Johnson</span>
-                            <span class="author-title">Regular Client</span>
+                            <span class="author-title" data-translate="regularClient">Regular Client</span>
                         </div>
                     </div>
                 </div>
@@ -644,12 +652,12 @@
                         <i data-lucide="star"></i>
                         <i data-lucide="star"></i>
                     </div>
-                    <p class="testimonial-text">"The nail artists here are true professionals. They brought my Pinterest ideas to life perfectly! The gel manicure lasted over 3 weeks."</p>
+                    <p class="testimonial-text" data-translate="testimonial2">"The nail artists here are true professionals. They brought my Pinterest ideas to life perfectly! The gel manicure lasted over 3 weeks."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">E</div>
                         <div class="author-info">
                             <span class="author-name">Emily Chen</span>
-                            <span class="author-title">Nail Art Enthusiast</span>
+                            <span class="author-title" data-translate="nailArtEnthusiast">Nail Art Enthusiast</span>
                         </div>
                     </div>
                 </div>
@@ -662,12 +670,12 @@
                         <i data-lucide="star"></i>
                         <i data-lucide="star"></i>
                     </div>
-                    <p class="testimonial-text">"Best pedicure experience ever! The spa treatment was heavenly and my feet have never felt so soft. The staff is friendly and professional."</p>
+                    <p class="testimonial-text" data-translate="testimonial3">"Best pedicure experience ever! The spa treatment was heavenly and my feet have never felt so soft. The staff is friendly and professional."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">M</div>
                         <div class="author-info">
                             <span class="author-name">Maria Garcia</span>
-                            <span class="author-title">Spa Pedicure Lover</span>
+                            <span class="author-title" data-translate="spaPedicureLover">Spa Pedicure Lover</span>
                         </div>
                     </div>
                 </div>
@@ -679,9 +687,9 @@
     <section id="contact" class="contact section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">Book Your Appointment</h2>
-                <p class="section-desc">Ready for your perfect nails? Contact us or book online.</p>
+                <span class="section-tag" data-translate="getInTouch">Get In Touch</span>
+                <h2 class="section-title" data-translate="bookYourAppointment">Book Your Appointment</h2>
+                <p class="section-desc" data-translate="contactDesc">Ready for your perfect nails? Contact us or book online.</p>
             </div>
             
             <div class="contact-grid">
@@ -689,49 +697,49 @@
                     <form class="contact-form" id="bookingForm">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                <label for="name" data-translate="yourName">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" data-placeholder-en="Enter your name" data-placeholder-ar="أدخل اسمك" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                <label for="phone" data-translate="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" data-placeholder-en="(555) 123-4567" data-placeholder-ar="(555) 123-4567" required>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                <label for="email" data-translate="emailAddress">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" data-placeholder-en="your@email.com" data-placeholder-ar="بريدك@email.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="date">Preferred Date</label>
+                                <label for="date" data-translate="preferredDate">Preferred Date</label>
                                 <input type="date" id="date" name="date" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="service">Select Service</label>
+                            <label for="service" data-translate="selectService">Select Service</label>
                             <select id="service" name="service" required>
-                                <option value="" disabled selected>Choose a service</option>
-                                <option value="classic-manicure">Classic Manicure - $25</option>
-                                <option value="gel-manicure">Gel Manicure - $40</option>
-                                <option value="spa-manicure">Spa Manicure - $35</option>
-                                <option value="classic-pedicure">Classic Pedicure - $35</option>
-                                <option value="spa-pedicure">Spa Pedicure - $50</option>
-                                <option value="gel-pedicure">Gel Pedicure - $55</option>
-                                <option value="acrylic-full">Acrylic Full Set - $55</option>
-                                <option value="acrylic-fill">Acrylic Fill - $35</option>
-                                <option value="dip-powder">Dip Powder - $45</option>
-                                <option value="gel-extensions">Gel Extensions - $60</option>
-                                <option value="nail-art">Nail Art Consultation</option>
-                                <option value="other">Other Services</option>
+                                <option value="" disabled selected data-translate="chooseService">Choose a service</option>
+                                <option value="classic-manicure" data-translate="optClassicManicure">Classic Manicure - $25</option>
+                                <option value="gel-manicure" data-translate="optGelManicure">Gel Manicure - $40</option>
+                                <option value="spa-manicure" data-translate="optSpaManicure">Spa Manicure - $35</option>
+                                <option value="classic-pedicure" data-translate="optClassicPedicure">Classic Pedicure - $35</option>
+                                <option value="spa-pedicure" data-translate="optSpaPedicure">Spa Pedicure - $50</option>
+                                <option value="gel-pedicure" data-translate="optGelPedicure">Gel Pedicure - $55</option>
+                                <option value="acrylic-full" data-translate="optAcrylicFull">Acrylic Full Set - $55</option>
+                                <option value="acrylic-fill" data-translate="optAcrylicFill">Acrylic Fill - $35</option>
+                                <option value="dip-powder" data-translate="optDipPowder">Dip Powder - $45</option>
+                                <option value="gel-extensions" data-translate="optGelExtensions">Gel Extensions - $60</option>
+                                <option value="nail-art" data-translate="optNailArt">Nail Art Consultation</option>
+                                <option value="other" data-translate="optOther">Other Services</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label for="time">Preferred Time</label>
+                            <label for="time" data-translate="preferredTime">Preferred Time</label>
                             <select id="time" name="time" required>
-                                <option value="" disabled selected>Choose a time slot</option>
+                                <option value="" disabled selected data-translate="chooseTimeSlot">Choose a time slot</option>
                                 <option value="09:00">9:00 AM</option>
                                 <option value="09:30">9:30 AM</option>
                                 <option value="10:00">10:00 AM</option>
@@ -755,12 +763,12 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Special Requests</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Any specific designs, colors, or special requests..."></textarea>
+                            <label for="message" data-translate="specialRequests">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any specific designs, colors, or special requests..." data-placeholder-en="Any specific designs, colors, or special requests..." data-placeholder-ar="أي تصميمات أو ألوان أو طلبات خاصة..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-full">
-                            <span>Book Appointment</span>
+                            <span data-translate="bookAppointment">Book Appointment</span>
                             <i data-lucide="calendar-check"></i>
                         </button>
                     </form>
@@ -769,8 +777,8 @@
                         <div class="success-icon">
                             <i data-lucide="check-circle"></i>
                         </div>
-                        <h3>Booking Request Sent!</h3>
-                        <p>We'll confirm your appointment within 24 hours. Thank you for choosing Black Besso!</p>
+                        <h3 data-translate="bookingRequestSent">Booking Request Sent!</h3>
+                        <p data-translate="bookingConfirmMsg">We'll confirm your appointment within 24 hours. Thank you for choosing Black Besso!</p>
                     </div>
                 </div>
                 
@@ -780,8 +788,8 @@
                             <i data-lucide="map-pin"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Visit Us</h4>
-                            <p>123 Beauty Lane, Suite 100<br>Beverly Hills, CA 90210</p>
+                            <h4 data-translate="visitUs">Visit Us</h4>
+                            <p data-translate="address">123 Beauty Lane, Suite 100<br>Beverly Hills, CA 90210</p>
                         </div>
                     </div>
                     
@@ -790,7 +798,7 @@
                             <i data-lucide="phone"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Call Us</h4>
+                            <h4 data-translate="callUs">Call Us</h4>
                             <p><a href="tel:+15551234567">(555) 123-4567</a></p>
                             <p><a href="tel:+15551234568">(555) 123-4568</a></p>
                         </div>
@@ -801,7 +809,7 @@
                             <i data-lucide="mail"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Email Us</h4>
+                            <h4 data-translate="emailUs">Email Us</h4>
                             <p><a href="mailto:hello@blackbesso.com">hello@blackbesso.com</a></p>
                             <p><a href="mailto:bookings@blackbesso.com">bookings@blackbesso.com</a></p>
                         </div>
@@ -812,18 +820,18 @@
                             <i data-lucide="clock"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Business Hours</h4>
+                            <h4 data-translate="businessHours">Business Hours</h4>
                             <div class="hours-list">
                                 <div class="hours-row">
-                                    <span>Monday - Friday</span>
+                                    <span data-translate="mondayFriday">Monday - Friday</span>
                                     <span>9:00 AM - 7:00 PM</span>
                                 </div>
                                 <div class="hours-row">
-                                    <span>Saturday</span>
+                                    <span data-translate="saturday">Saturday</span>
                                     <span>9:00 AM - 6:00 PM</span>
                                 </div>
                                 <div class="hours-row">
-                                    <span>Sunday</span>
+                                    <span data-translate="sunday">Sunday</span>
                                     <span>10:00 AM - 5:00 PM</span>
                                 </div>
                             </div>
@@ -864,8 +872,8 @@
     <section class="map-section">
         <div class="map-placeholder">
             <i data-lucide="map"></i>
-            <span>Interactive Map</span>
-            <p>123 Beauty Lane, Suite 100, Beverly Hills, CA 90210</p>
+            <span data-translate="interactiveMap">Interactive Map</span>
+            <p data-translate="address">123 Beauty Lane, Suite 100, Beverly Hills, CA 90210</p>
         </div>
     </section>
 
@@ -878,7 +886,7 @@
                         <span class="logo-icon">✦</span>
                         <span class="logo-text">Black Besso</span>
                     </a>
-                    <p class="footer-desc">Where elegance meets artistry. Premium nail care and beauty treatments for the modern woman.</p>
+                    <p class="footer-desc" data-translate="footerDesc">Where elegance meets artistry. Premium nail care and beauty treatments for the modern woman.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -907,34 +915,34 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-translate="quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" data-translate="home">Home</a></li>
+                        <li><a href="#about" data-translate="aboutUs">About Us</a></li>
+                        <li><a href="#services" data-translate="services">Services</a></li>
+                        <li><a href="#gallery" data-translate="gallery">Gallery</a></li>
+                        <li><a href="#pricing" data-translate="pricing">Pricing</a></li>
+                        <li><a href="#contact" data-translate="contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4 data-translate="servicesFooter">Services</h4>
                     <ul>
-                        <li><a href="#services">Manicure</a></li>
-                        <li><a href="#services">Pedicure</a></li>
-                        <li><a href="#services">Acrylic Nails</a></li>
-                        <li><a href="#services">Gel Nails</a></li>
-                        <li><a href="#services">Nail Art</a></li>
-                        <li><a href="#services">Beauty Treatments</a></li>
+                        <li><a href="#services" data-translate="manicure">Manicure</a></li>
+                        <li><a href="#services" data-translate="pedicure">Pedicure</a></li>
+                        <li><a href="#services" data-translate="acrylicNailsFooter">Acrylic Nails</a></li>
+                        <li><a href="#services" data-translate="gelNailsFooter">Gel Nails</a></li>
+                        <li><a href="#services" data-translate="nailArtFooter">Nail Art</a></li>
+                        <li><a href="#services" data-translate="beautyTreatmentsFooter">Beauty Treatments</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Subscribe for exclusive offers, nail trends, and beauty tips.</p>
+                    <h4 data-translate="stayUpdated">Stay Updated</h4>
+                    <p data-translate="newsletterDesc">Subscribe for exclusive offers, nail trends, and beauty tips.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
+                        <input type="email" placeholder="Your email address" data-placeholder-en="Your email address" data-placeholder-ar="بريدك الإلكتروني" required>
                         <button type="submit">
                             <i data-lucide="send"></i>
                         </button>
@@ -943,10 +951,10 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Black Besso Nail Salon. All rights reserved.</p>
+                <p data-translate="copyright">&copy; 2025 Black Besso Nail Salon. All rights reserved.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#" data-translate="privacyPolicy">Privacy Policy</a>
+                    <a href="#" data-translate="termsOfService">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -965,7 +973,7 @@
         <div class="lightbox-content">
             <div class="img-placeholder large">
                 <i data-lucide="image"></i>
-                <span>Nail Art Preview</span>
+                <span data-translate="nailArtPreview">Nail Art Preview</span>
             </div>
         </div>
     </div>
