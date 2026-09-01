@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langText = document.getElementById('langText');
     const mobileLangText = document.getElementById('mobileLangText');
     
-    // Get saved language preference or default to English
-    let currentLang = localStorage.getItem('lang') || 'en';
+    // Get saved language preference or default to Arabic
+    let currentLang = localStorage.getItem('lang') || 'ar';
     
     function applyLanguage(lang) {
         currentLang = lang;
